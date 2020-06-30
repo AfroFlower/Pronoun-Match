@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{
+    /* background-color: rgb(255, 68, 115); */
+}
+
 .header {
     grid-area: header;
     background-color: rgb(80, 198, 253);}
