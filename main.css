@@ -4,13 +4,14 @@
     box-sizing: border-box;
 }
 
-body{
-    /* background-color: rgb(255, 68, 115); */
-}
+/* body{
+    background-color: rgb(255, 68, 115);
+} */
 
 .header {
     grid-area: header;
     background-color: rgb(80, 198, 253);}
+    
 .content1 {
     grid-area: content1;
     background-color: rgb(232, 178, 243);}
@@ -32,10 +33,13 @@ body{
 .container {
 /* NOTE: Display: Grid turns an HTML tag into a grid layout */
     display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 4fr)); */
     background-color: rgb(255, 68, 115);
 /* NOTE: Grid-Template is shorthand for 
     and grid-template-rows grid-template-columns */
-    grid-template: repeat(4, 150px) / repeat(4, auto);
+    /* grid-template: repeat(3, 100px) / repeat(4, 1fr); */
+    grid-template: repeat(auto-fit, minmax(200px, 4fr));
+
 /* NOTE: Bellow syntax is: 
     "three rows at 150px height and one column at auto width"
     or >> grid-template: 150px 150px 150px / auto; << */
@@ -48,16 +52,5 @@ body{
     grid-template-areas: 
     "header header header header"
     ". content1 content2 ."
-    ". content3 content4 ."
-    "footer footer footer footer";
-
-
+    ". content3 content4 .";
 }
-
-/* #content-box{
-background-color: rgb(209, 253, 106);
-} */
-
-/* #full-logo{
-    width: auto;
-} */
