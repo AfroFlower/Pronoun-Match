@@ -4,9 +4,35 @@
     box-sizing: border-box;
 }
 
-/* body{
+body{
     background-color: rgb(255, 68, 115);
-} */
+}
+
+.container {
+/* NOTE: Display: Grid turns an HTML tag into a grid layout */
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 4fr)); */
+    background-color: rgb(255, 68, 115);
+/* NOTE: Grid-Template is shorthand for 
+    and grid-template-rows grid-template-columns */
+    /* grid-template: repeat(3, 100px) / repeat(4, 1fr); */
+    grid-template: repeat(auto-fill, minmax(200px, 5fr));
+
+/* NOTE: Bellow syntax is: 
+    "three rows at 150px height and one column at auto width"
+    or >> grid-template: 150px 150px 150px / auto; << */
+    grid-gap: 10px;
+    font-size: 20px;
+    text-align: center;
+
+/* NOTE: I can create a Template-Area 
+(Area Template) to visually see my layout */
+    grid-template-areas: 
+    "header header header header"
+    ". content1 content2 ."
+    ". content3 content4 ."
+    "footer footer footer footer";
+}
 
 .header {
     grid-area: header;
@@ -26,31 +52,11 @@
     background-color: rgb(175, 121, 185);}
 .footer {
     grid-area: footer;
-/* NOTE: Grid-Area as #/#/#/# is when there is not a Template-Area */
-/* grid-area: 4/1/5/5; */
     background-color: rgb(80, 253, 215);}
 
-.container {
-/* NOTE: Display: Grid turns an HTML tag into a grid layout */
-    display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(200px, 4fr)); */
-    background-color: rgb(255, 68, 115);
-/* NOTE: Grid-Template is shorthand for 
-    and grid-template-rows grid-template-columns */
-    /* grid-template: repeat(3, 100px) / repeat(4, 1fr); */
-    grid-template: repeat(auto-fit, minmax(200px, 4fr));
+/* NOTE: Grid-Area as #/#/#/# is when there is not a Template-Area */
+/* grid-area: 4/1/5/5; */
 
-/* NOTE: Bellow syntax is: 
-    "three rows at 150px height and one column at auto width"
-    or >> grid-template: 150px 150px 150px / auto; << */
-    grid-gap: 10px;
-    font-size: 20px;
-    text-align: center;
-
-/* NOTE: I can create a Template-Area 
-(Area Template) to visually see my layout */
-    grid-template-areas: 
-    "header header header header"
-    ". content1 content2 ."
-    ". content3 content4 .";
+.content1, .content2, .content3, .content4 {
+    padding: 10px;
 }
