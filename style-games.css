@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(80, 198, 253);
+    position: relative;
+}
+
+.header .full-logo{
+    padding: 10px;
+    width: 100%;
+}
+
+.content-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+    grid-gap: 10px;
+    font-size: 20px;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.content-grid div {
+    background-color: rgb(255, 255, 255);
+    display: block;
+    width: 100%;
+    padding: 30px;
+    border: solid 2px white;
+    border-radius: 15px;
+}
+
+/* footer {
+    background-color: dodgerblue;
+    padding: 20px;
+    text-align: center;
+    position: -webkit-sticky;
+} */
