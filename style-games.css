@@ -5,17 +5,41 @@
 }
 
 body {
-    background-color: rgb(80, 198, 253);
+    background-color: var(--light-blue-color);
+    font-family: 'Fredoka One', cursive, sans-serif;
 }
+
+:root{
+    --dark-blue-color: #0D85DB;
+    --medium-blue-color: #3FA9F5;
+    --light-blue-color: #81C5EF;
+}
+
+/* NAVIGATION */
 
 .navbar {
     display: flex;
-    flex-flow: row;
+    flex-direction: row;
     padding: 10px;
-    width: auto;
-    background-color: dodgerblue;
+    /* width: auto; */
+    /* justify-content: center; */
+    align-items: center;
+    background-color: var(--medium-blue-color);
+}
+.navbar > .fa-circle {
+    color: white;
+    /* align-content: space-around; */
+}
+.navbar > .full-logo {
+    order: -1;
 }
 
+.navbar > .full-logo, .fa-circle {
+    align-content: space-around;
+}
+
+
+/* SUPPORTS */
 
 @supports not (display: grid){
         .content-grid {
@@ -37,48 +61,30 @@ body {
     }
 }
 
+/* FLEX LAYOUT - CARDS */
+
 .content-grid > .cards {
     display: flex;
     flex-flow: column;
-    /* flex-wrap: wrap; */
     align-self: center;
     justify-content: center;
 
     text-align: center;
-    font-size: 1.5rem;
+    color: var(--dark-blue-color);
+    font-size: 2rem;
+    text-transform: uppercase;
+    line-height: 40px;
+    letter-spacing: 0.25rem;
+    
 
-    /* width: 170px; */
-    height: 170px;
+    /* width: 200px; */
+    height: 200px;
     padding: 1rem;
-
+    
     background: #FFFFFF;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     border-radius: 35px;
 }
 
-/* .content-grid > .cards {
-    display: flex;
-    background-color: rgb(255, 255, 255);
-    padding: 30px;
-    border: solid 2px white;
-    border-radius: 15px;
-    align-content: center;
-    justify-content: center;
-    font-size: 20px;
-    text-align: center;
-} */
-
-/* footer {
-    background-color: dodgerblue;
-    padding: 20px;
-    text-align: center;
-    position: -webkit-sticky;
-} */
-
-/* .card-test{
-    width: 170px;
-    height: 170px;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
-    border-radius: 35px;
-} */
+/* SVG DESIGN SHAPES HERE */
+/* The shape designs need to be sticky to the bottom corners */

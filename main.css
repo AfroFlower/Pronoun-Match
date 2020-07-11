@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* The 'root' reminds me of defining brand colors, fonts, and themes in one place */
+:root{
+    --dark-blue-color: #0D85DB;
+    --medium-blue-color: #3FA9F5;
+    --light-blue-color: #81C5EF;
+    --main-text-fredokaOne: 'Fredoka One', cursive, sans-serif;
+    --secondary-text-Roboto: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: var(--light-blue-color);
+    font-family: var(--secondary-text-Roboto);
+}
+
+/* MAIN GRID */
+.main-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+    justify-items: center;
+    margin-bottom: 0px;
+}
+
+/* HEADER */
+.header {
+    align-items: center;
+    /* NOTE: CROP LOGO */
+}
+
+header > .tagline{
+    font-family: var(--secondary-text-Roboto);
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    line-height: 40px;
+    letter-spacing: 0.25rem;
+}
+
+/* NAVBAR */
+ /* font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px; */
+
+/* MAIN CONTENT */
+.main{
+    /* justify-items: center; */
+}
+
+.enter-btn{
+    font-family: var(--main-text-fredokaOne);
+    text-align: center;
+    color: var(--dark-blue-color);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    line-height: 40px;
+    letter-spacing: 0.25rem;
+    background-color: white;
+    border: solid 3px white;
+    padding: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 5rem;
+    /* border-radius: 100px; */
+}
+
+.enter-btn:hover{
+    color: white;
+    background-color: var(--medium-blue-color);
+    border: solid 3px var(--medium-blue-color);
+}
+
+.arrow-icon{
+    text-align: center;
+    padding-top: 10px;
+}
+
+/* SVG DESIGN SHAPES HERE */
+/* The shape designs need to be sticky to the bottom corners */
