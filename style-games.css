@@ -34,14 +34,14 @@ body {
     order: -1;
 }
 
-.navbar > .full-logo, .fa-circle {
-    align-content: space-around;
-}
+/* .navbar > .full-logo, .fa-circle {
+    
+} */
 
 
 /* SUPPORTS */
 
-@supports not (display: grid){
+@supports not (display: grid) {
         .content-grid {
         display: flex;
         flex-direction: column;

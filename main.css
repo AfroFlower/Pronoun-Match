@@ -5,7 +5,7 @@
 }
 
 /* The 'root' reminds me of defining brand colors, fonts, and themes in one place */
-:root{
+:root {
     --dark-blue-color: #0D85DB;
     --medium-blue-color: #3FA9F5;
     --light-blue-color: #81C5EF;
@@ -13,35 +13,61 @@
     --secondary-text-Roboto: 'Roboto', sans-serif;
 }
 
+/* for sticky footer */
+html, body{
+    height: 100%;
+}
+
+
 body{
+    display: flex;
+    flex-direction: column;
     background-color: var(--light-blue-color);
     font-family: var(--secondary-text-Roboto);
 }
 
+
 /* MAIN GRID */
-.main-container{
+.main-container {
+    min-height: 100%;
     display: grid;
+    grid-template-rows: repeat(2, 1fr);
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    gap: 1rem;
-    justify-items: center;
-    margin-bottom: 0px;
+    gap: 60px;
+    justify-content: center;
 }
 
-/* HEADER */
+/* footer{
+    background-color: white;
+} */
+
+/* HEADER - GRID ITEM*/
 .header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    /* NOTE: CROP LOGO */
+    justify-content: center;
+    /* padding-top: 40px; */
+    padding: 20px;
+
 }
 
-header > .tagline{
+header > img {
+    order: -1;
+    width: 100%;
+    height: auto;
+}
+
+header > .tagline {
     font-family: var(--secondary-text-Roboto);
     color: white;
-    text-align: center;
-    font-size: 2rem;
+    font-size: 3rem;
     text-transform: uppercase;
-    line-height: 40px;
     letter-spacing: 0.25rem;
+    padding: 20px 0px 0px 0px;
+    justify-items: center;
+    text-align: center;
 }
 
 /* NAVBAR */
@@ -51,12 +77,17 @@ header > .tagline{
     font-size: 36px;
     line-height: 42px; */
 
-/* MAIN CONTENT */
-.main{
-    /* justify-items: center; */
+
+/* SECTION - GRID ITEM and/then FLEX BOX*/
+.main-body {
+    /* max-width: 1920px; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* align-content: center; */
 }
 
-.enter-btn{
+.enter-btn {
     font-family: var(--main-text-fredokaOne);
     text-align: center;
     color: var(--dark-blue-color);
@@ -64,23 +95,28 @@ header > .tagline{
     text-transform: uppercase;
     line-height: 40px;
     letter-spacing: 0.25rem;
+
+    /* width: 90%; */
+    padding: 20px;
+    margin: 30px;
+
     background-color: white;
     border: solid 3px white;
-    padding: 15px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
-    border-radius: 5rem;
-    /* border-radius: 100px; */
+    border-radius: 100px;
 }
 
-.enter-btn:hover{
+.enter-btn:hover {
     color: white;
     background-color: var(--medium-blue-color);
     border: solid 3px var(--medium-blue-color);
 }
 
-.arrow-icon{
-    text-align: center;
-    padding-top: 10px;
+.arrow-icon {
+    color: white;
+    font-size: 5rem;
+    /* text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4); */
+    align-self: center;
 }
 
 /* SVG DESIGN SHAPES HERE */
